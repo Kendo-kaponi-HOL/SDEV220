@@ -1,15 +1,33 @@
-# Stephen Garcia
+# Stephen Garcia Perez
 # MO2_LAB
-#
+# This program does the following, it will ask a student its last name and then store
+# it in a variable, if the value entered is NOT "ZZZ", then it will go ahead and ask the student for its name
+# then it will ask for their GPA and store them in variables. Then we check if their GPA is greater than 3.25
+# to print if they enter the Honor roll and if its greater than 3.5 then it prints a message telling them they
+# have entered Dean's List
 
-guess_me = 5
+students_last_name = ""
 
-for number in range(10):
-    if number < guess_me:
-        print("too low")
-    elif number == guess_me:
-        print("found it!")
+while students_last_name != "ZZZ":
+    students_last_name = input("\nPlease enter your last name or enter ZZZ to quit: \n")
+    if students_last_name == "ZZZ":
         break
-    if number > guess_me:
-        print("oops")
-        break
+     
+    students_first_name = input("\nEnter your first name: \n")
+    students_GPA = float(input("\nEnter your GPA: \n"))
+    
+    # Should they enter both or one list? Little confused here
+    
+    if students_GPA >= 3.5:
+        print(f"{students_first_name} {students_last_name} you have made it to the Dean's List")
+    if students_GPA >= 3.25:
+        print(f"{students_first_name} {students_last_name} you have made it to the Honor Roll")
+    
+    # If they are only supposed to enter one list then this code fits the assignment better:
+    
+    # if students_GPA >= 3.5:
+    #    print(f"{students_first_name} {students_last_name} you have made it to the Dean's List")
+    # elif students_GPA >= 3.25:
+    #    print(f"{students_first_name} {students_last_name} you have made it to the Honor Roll")
+    
+print("The program has ended")
