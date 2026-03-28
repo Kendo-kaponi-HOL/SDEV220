@@ -16,7 +16,6 @@ while students_last_name != "ZZZ":
     students_first_name = input("\nEnter your first name: \n")
     students_GPA = float(input("\nEnter your GPA: \n"))
     
-    # Should they enter both or one list? Little confused here
     
     if students_GPA >= 3.5:
         print(f"{students_first_name} {students_last_name} you have made it to the Dean's List")
