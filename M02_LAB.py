@@ -20,14 +20,10 @@ while students_last_name != "ZZZ":
     
     if students_GPA >= 3.5:
         print(f"{students_first_name} {students_last_name} you have made it to the Dean's List")
-    if students_GPA >= 3.25:
+    elif students_GPA >= 3.25:
         print(f"{students_first_name} {students_last_name} you have made it to the Honor Roll")
-    
-    # If they are only supposed to enter one list then this code fits the assignment better:
-    
-    # if students_GPA >= 3.5:
-    #    print(f"{students_first_name} {students_last_name} you have made it to the Dean's List")
-    # elif students_GPA >= 3.25:
-    #    print(f"{students_first_name} {students_last_name} you have made it to the Honor Roll")
+    else:
+        print(f"{students_first_name} {students_last_name} sorry but your GPA is under 3.25")
+
     
 print("The program has ended")
