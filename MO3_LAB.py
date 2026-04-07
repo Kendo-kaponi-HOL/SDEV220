@@ -22,13 +22,19 @@ class Automobile(Vehicle):
 
 def add_car():
     vehicle_type = input("\nEnter vehicle type: \n")            # vehicle_type = "Truck"
-    vehicle_year = input("\nEnter vehicle year: \n")            # vehicle_year = "2002"       
+    while True:
+        vehicle_year = input("\nEnter vehicle year: \n")            # vehicle_year = "2002"       
+        if len(vehicle_year) <= 0:
+            print("Year cannot be empty, please try again.")
+        else:
+            break
+        
     vehicle_make = input("\nEnter vehicle make: \n")            # vehicle_make = "Toyota"
     vehicle_model = input("\nEnter vehicle model: \n")          # vehicle_model = "Lexus"
     while True:                                                 # vehicle_doors = 4
         try:                                                    # vehicle_roof = "solid"
-            vehicle_doors = int(input("\nEnter vehicle doors 2-4: \n"))
-            if 2 <= vehicle_doors <= 4:
+            vehicle_doors = int(input("\nEnter vehicle doors (2 or 4): \n"))
+            if vehicle_doors == 2 or vehicle_doors == 4:
                 break
             else:
                 print("Please enter a number between 2 and 4")
@@ -45,7 +51,8 @@ def add_car():
 if __name__ == "__main__":
     while True:
         try:
-            decision = int(input("\n1. \t Add car\n2. \t Exit\n\n Selected Choice: "))
+            print("\nPlease make a choice:")
+            decision = int(input("\n1. \t Add Vehicle\n2. \t Exit\n\n Selected Choice: "))
             print()
             if decision == 1:
                 my_car = add_car()
