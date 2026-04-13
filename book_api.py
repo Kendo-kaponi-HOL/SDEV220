@@ -1,3 +1,7 @@
+# Stephen Garcia Perez
+# M4_LAB - Case Study: Python API
+# Program allows for creation of Book API with delete, add, and get requests, by importing Flask, request, and SQLAlchemy. Database has been setup as well as functions that allow said actions
+
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
